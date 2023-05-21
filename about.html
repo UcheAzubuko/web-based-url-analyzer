@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="TemplateMo" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <title>Host Cloud Template - About Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <!--
+
+Host Cloud Template
+
+https://templatemo.com/tm-541-host-cloud
+
+-->
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+      <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><h2>Host <em>Cloud</em></h2></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li id="homeNavLink" class="nav-item">
+                <a class="nav-link" href="index.html"
+                  >Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Our Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="functional-buttons">
+            <ul>
+              <li
+                id="signInNavButton"
+                role="button"
+                data-toggle="modal"
+                data-target="#signInAuthModal"
+              >
+                <a href="#">Sign in</a>
+              </li>
+              <li
+                id="signUpNavButton"
+                role="button"
+                data-toggle="modal"
+                data-target="#signUpAuthModal"
+              >
+                <a href="#">Sign Up</a>
+              </li>
+              <li id="signOutNavButton" role="button">
+                <a href="#">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sign Up Modal -->
+    <div
+      class="modal fade"
+      id="signUpAuthModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signUpAuthModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="signUpEmail">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="signUpEmail"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="signUpPassword">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signUpPassword"
+                  placeholder="Password"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="closeSignUpModal"
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button id="signUpButton" type="button" class="btn btn-primary">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Log In Modal -->
+    <div
+      class="modal fade"
+      id="signInAuthModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signInAuthModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Log In</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="signInEmail">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="signInEmail"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="signInPassword">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signInPassword"
+                  placeholder="Password"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="closeSignInModal"
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button id="signInButton" type="button" class="btn btn-primary">
+              Sign In
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <!-- Heading Starts Here -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>About Us</h1>
+            <p><a href="index.html">Home</a> / <span>About Us</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Heading Ends Here -->
+
+    <!-- About Us Starts Here -->
+    <div class="about-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="left-image">
+              <img src="assets/images/our-team.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-content">
+              <div class="section-heading">
+                <span>About Us</span>
+                <h2>Background of our company</h2>
+                <p>
+                  Duis sit amet nibh non sapien tincidunt bibendum. Curabitur
+                  rutrum justo id leo ornare, suscipit lobortis augue volutpat.
+                  Sed ligula arcu, interdum eu magna eget, tristique aliquet
+                  nibh.
+                </p>
+              </div>
+              <div id="tabs">
+                <ul>
+                  <li><a href="#tabs-1">Our History</a></li>
+                  <li><a href="#tabs-2">Our Cloud</a></li>
+                  <li><a href="#tabs-3">Our Network</a></li>
+                </ul>
+                <section class="tabs-content">
+                  <article id="tabs-1">
+                    <p>
+                      Ut elementum a elit sed tristique. Pellentesque sed semper
+                      erat. Orci varius natoque penatibus et magnis dis
+                      parturient montes, nascetur ridiculus mus. Aenean quam
+                      erat, rutrum ut malesuada a, commodo vitae lectus. Integer
+                      volutpat sapien in arcu fringilla, ac eleifend est
+                      facilisis. <br /><br />Phasellus finibus lacus eu
+                      scelerisque rutrum. Duis purus eros, blandit ultricies
+                      iaculis in, commodo quis lacus. Pellentesque interdum
+                      varius enim nec accumsan.
+                    </p>
+                  </article>
+                  <article id="tabs-2">
+                    <p>
+                      Aenean molestie, odio quis viverra ultricies, leo tellus
+                      lacinia neque, sit amet maximus tortor nunc aliquet felis.
+                      Duis sit amet nibh non sapien tincidunt bibendum.
+                      Curabitur rutrum justo id leo ornare, suscipit lobortis
+                      augue volutpat. <br /><br />Sed ligula arcu, interdum eu
+                      magna eget, tristique aliquet nibh. Aenean sodales justo
+                      vitae ex pharetra, vitae tincidunt dolor condimentum. Cras
+                      vel mattis risus.
+                    </p>
+                  </article>
+                  <article id="tabs-3">
+                    <p>
+                      Fusce in semper velit, at tempus augue. Morbi quis auctor
+                      ipsum, ut accumsan neque. Vivamus dapibus ipsum placerat
+                      ante commodo, eget suscipit tortor hendrerit. Quisque
+                      lacinia sed velit et maximus. <br /><br />Quisque dictum,
+                      lacus a malesuada finibus, arcu magna luctus risus, eu
+                      accumsan risus elit vitae lacus. Vestibulum et lorem non
+                      erat efficitur iaculis ut nec nibh. Vestibulum mauris
+                      ipsum, tempor tincidunt justo sit amet, bibendum tincidunt
+                      dui.
+                    </p>
+                  </article>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Us Ends Here -->
+
+    <!-- Team Starts Here -->
+    <div class="team-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="section-heading">
+              <span>Our Team</span>
+              <h2>Meet the greatest people</h2>
+              <p>
+                Integer blandit, tellus varius vulputate cursus, purus orci
+                tincidunt tortor, eget tincidunt elit justo non leo. Donec
+                mollis nulla id est suscipit, ut laoreet nibh faucibus.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="team-item">
+              <img src="assets/images/team-01.jpg" alt="" />
+              <div class="down-content">
+                <h4>Jonathan Smart</h4>
+                <span>Co-Founder</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="team-item">
+              <img src="assets/images/team-02.jpg" alt="" />
+              <div class="down-content">
+                <h4>Mary Morris</h4>
+                <span>Co-Founder</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="team-item">
+              <img src="assets/images/team-03.jpg" alt="" />
+              <div class="down-content">
+                <h4>George White</h4>
+                <span>Co-Founder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Ends Here -->
+
+    <!-- Testimonials Starts Here -->
+    <
+    <div class="testimonials-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <span>Testimonials</span>
+              <h2>What they say about us</h2>
+            </div>
+          </div>
+          <div class="col-md-10 offset-md-1">
+            <div class="owl-testimonials owl-carousel">
+              <div class="testimonial-item">
+                <div class="icon">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+                <p>
+                  "Ut elementum a elit sed tristique. Pellentesque sed semper
+                  erat. Orci varius natoque penatibus et magnis dis parturient
+                  montes, nascetur ridiculus mus. Aenean quam erat, rutrum ut
+                  malesuada."
+                </p>
+                <h4>William Smith</h4>
+                <span>New Co-Founder</span>
+              </div>
+              <div class="testimonial-item">
+                <div class="icon">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+                <p>
+                  "Quisque lacinia sed velit et maximus. Quisque dictum, lacus a
+                  malesuada finibus, arcu magna luctus risus, eu accumsan risus
+                  elit vitae lacus."
+                </p>
+                <h4>Vinny Smart</h4>
+                <span>Digital Marketer</span>
+              </div>
+              <div class="testimonial-item">
+                <div class="icon">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+                <p>
+                  "Vestibulum mauris ipsum, tempor tincidunt justo sit amet,
+                  bibendum tincidunt dui. Aenean molestie, odio quis viverra
+                  ultricies, leo tellus lacinia neque, sit amet maximus tortor
+                  nunc aliquet felis."
+                </p>
+                <h4>Trevor Liam</h4>
+                <span>Technology Chef</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonials Ends Here -->
+
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>About Us</h2>
+              </div>
+              <p>
+                Host Cloud is provided by TemplateMo for free of charge. Anyone
+                can download and use this CSS Bootstrap template for commercial
+                purposes.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>Hosting Plans</h2>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">Basic Cloud 5X</a></li>
+                <li><a href="#">Cloud VPS 10X</a></li>
+                <li><a href="#">Advanced Cloud</a></li>
+                <li><a href="#">Custom Designs</a></li>
+                <li><a href="#">Special Solutions</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>Useful Links</h2>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">Cloud Hosting Platform</a></li>
+                <li><a href="#">Light Speed Zone</a></li>
+                <li><a href="#">Content Delivery Network</a></li>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Latest News</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>More Information</h2>
+              </div>
+              <ul class="footer-list">
+                <li>Phone: <a href="#">010-020-0560</a></li>
+                <li>Email: <a href="#">mail@company.com</a></li>
+                <li>Support: <a href="#">support@company.com</a></li>
+                <li>Website: <a href="#">www.company.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="sub-footer">
+              <p>
+                Copyright &copy; 2020 Cloud Hosting Company - Designed by
+                <a rel="nofollow" href="https://templatemo.com">TemplateMo</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Ends Here -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Firebase CDN -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        onAuthStateChanged,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDjfrNXiYZdH2Njjqr1tqtR6JDWcf-xt9s",
+        authDomain: "tello-final-year-project.firebaseapp.com",
+        projectId: "tello-final-year-project",
+        storageBucket: "tello-final-year-project.appspot.com",
+        messagingSenderId: "338986317750",
+        appId: "1:338986317750:web:79d7e60a59cfbf362e7317",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      // Store getAuth functionality from firebase to enable authentication in the app
+      const auth = getAuth(app);
+
+      const signUpEmail = document.querySelector("#signUpEmail");
+      const signUpPassword = document.querySelector("#signUpPassword");
+      const signInEmail = document.querySelector("#signInEmail");
+      const signInPassword = document.querySelector("#signInPassword");
+      const signUpNavButton = document.querySelector("#signUpNavButton");
+      const signInNavButton = document.querySelector("#signInNavButton");
+      const signInButton = document.querySelector("#signInButton");
+      const signUpButton = document.querySelector("#signUpButton");
+      const signOutNavButton = document.querySelector("#signOutNavButton");
+      const homeNavLink = document.querySelector("#homeNavLink");
+      const closeSignUpModal = document.querySelector("#closeSignUpModal");
+      const closeSignInModal = document.querySelector("#closeSignInModal");
+
+      signOutNavButton.style.display = "none";
+      homeNavLink.style.display = "none";
+
+      const userSignUp = async () => {
+        const email = signUpEmail.value;
+        const password = signUpPassword.value;
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+            alert(
+              `Hi, user with email: ${user.email}. Your account has been created successfully.`
+            );
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage);
+          });
+      };
+
+      const userSignIn = async () => {
+        const email = signInEmail.value;
+        const password = signInPassword.value;
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+            alert(
+              `Hi, user with email: ${user.email}. You have signed into your account successfully.`
+            );
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage);
+          });
+      };
+
+      const userSignOut = async () => {
+        await signOut(auth);
+      };
+
+      const checkAuthState = async () => {
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            signInEmail.value = "";
+            signInPassword.value = "";
+            homeNavLink.style.display = "block";
+            signUpNavButton.style.display = "none";
+            signInNavButton.style.display = "none";
+            signUpEmail.value = "";
+            signUpPassword.value = "";
+            signOutNavButton.style.display = "block";
+            closeSignUpModal.click();
+            closeSignInModal.click();
+          } else {
+            signInEmail.value = "";
+            signInPassword.value = "";
+            homeNavLink.style.display = "none";
+            signUpNavButton.style.display = "inline-block";
+            signInNavButton.style.display = "inline-block";
+            signUpEmail.value = "";
+            signUpPassword.value = "";
+            signOutNavButton.style.display = "none";
+          }
+        });
+      };
+
+      checkAuthState();
+
+      signUpButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        userSignUp();
+      });
+
+      signInButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        userSignIn();
+      });
+
+      signOutNavButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        userSignOut();
+      });
+    </script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <script language="text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t) {
+        //declaring the array outside of the
+        if (!cleared[t.id]) {
+          // function makes it static and global
+          cleared[t.id] = 1; // you could use true and false, but that's more typing
+          t.value = ""; // with more chance of typos
+          t.style.color = "#fff";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,343 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+*, ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+* {
+    font-family: "Poppins"
+}
+
+.tabs ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.tabs ul li a {
+    display: block;
+    outline: none;
+    padding: 1rem;
+    text-decoration: none;
+    border: 1px solid #eee;
+    border-bottom: 0;
+    background-color: #eee;
+    color: #000;
+    transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px)
+}
+
+.tabs ul li a.active {
+    background-color: #fff
+}
+
+.tabs>div>table {
+    display: none;
+    border: 1px solid #eee;
+    border-top: 0;
+    padding: 2rem 1rem
+}
+
+.tabs>div>table.active {
+    display: inline-block
+}
+
+.tabs>div>div {
+    display: none;
+    border: 1px solid #eee;
+    border-top: 0;
+    padding: 2rem 1rem
+}
+
+.tabs>div>div.active {
+    display: inline-block
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: .9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+    background-color: #fff;
+    border-radius: 10px;
+    align-self: center
+}
+
+.styled-table thead tr {
+    background-color: red;
+    color: black;
+    text-align: left
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #ddd
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879
+}
+
+nav {
+    display: flex;
+    padding: .5% 4%;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 20px
+}
+
+nav img {
+    width: 150px
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #76ff5a;
+    display: block;
+    margin: auto;
+    transition: .5s
+}
+
+.nav-links ul li:hover:after {
+    width: 100%
+}
+
+.text-box {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px
+}
+
+.text-box h1 {
+    font-size: 39px
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 10px 10px;
+    transition: all .5s
+}
+
+.search-container .text-search-box {
+    width: 100%;
+    max-width: 750px;
+    padding: 5px;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    height: 43px;
+    padding-left: 20px;
+    border: 4px #fff solid;
+    transition: border-color .5s;
+    font-size: large
+}
+
+.search-container .text-search-box:focus, .search-container .text-search-box:focus+.primary-button {
+    border-color: #76ff5a !important;
+    outline: none
+}
+
+.search-container .primary-button {
+    height: 43px;
+    width: 60px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    margin-left: -2px;
+    background-color: #76ff5a;
+    border: 2px #fff solid;
+    transition: border-color background-color .5s
+}
+
+.search-container .primary-button i {
+    content: "🔍";
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px
+}
+
+.background-container {
+    background-image: url(1daed1304abe20249a246454222cb673.jpg);
+    min-height: 100vh;
+    object-fit: cover
+}
+
+.cta {
+    display: none;
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0
+}
+
+.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer
+}
+
+.hero-btn:hover {
+    border: 1px solid #76ff5a;
+    background: #76ff5a;
+    transition: 1s
+}
+
+@media(max-width: 700px) {
+    .cta h1 {
+        font-size: 24px
+    }
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.footer .social-links ul li {
+    text-decoration: none;
+    list-style: none
+}
+
+.footer .social-links ul li i {
+    color: #fff;
+    font-size: 24px;
+    transition: all .5s;
+    width: 20px;
+    height: 20px
+}
+
+.footer .social-links ul li i:hover {
+    color: #76ff5a
+}
+
+.flex-search {
+    padding: 0;
+    width: 100%;
+    margin: 0% auto;
+    border: 0px solid red
+}
+
+.flex-searchwrapper {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    overflow: hidden;
+    background: transparent;
+    margin: 0 auto
+}
+
+.copy {
+    padding: 16px 0
+}
+
+.plant-name {
+    font-size: 32px;
+    text-align: center;
+    padding-top: 175px
+}
+
+.info-div-container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 800px;
+    margin: 50px auto
+}
+
+.info-div {
+    background-color: #ffffff78;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 20px
+}
+
+.plant-image {
+    width: 50%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px
+}
+
+.info-section-title {
+    FONT-SIZE: larger;
+    font-style: italic
+}
+
+.info-section {
+    margin: 10px 0
+}
+
+.table-container {
+    display: flex;
+    margin-bottom: 20px
+}

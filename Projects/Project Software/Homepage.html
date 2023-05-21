@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="Homepage.css">	
+<head>
+	<title>
+		G-URL
+	</title>
+	<script>
+		function threatact(){
+			var no =  document.getElementById("no").value;
+	   		var apikey = "2802cce7-a090-4ea4-9782-c41b0be91b9b";
+			var apipass = "27f7475b-4dc4-4d7e-a072-81b533739654";
+			var dest = document.getElementById("threatacts");
+			var r = new XMLHttpRequest();	
+			var test;
+
+			r.open("GET", "https://api.xforce.ibmcloud.com/threat_activities?limit=" +no, true);
+			r.setRequestHeader("Authorization", "Basic "+ window.btoa(apikey + ":" + apipass));
+
+			r.onreadystatechange = function () {
+			switch(r.readyState) {
+				case 0: dest.innerText = "UNSENT"; break;
+				case 1: dest.innerText = "OPENED"; break;
+				case 2: dest.innerText = "HEADERS_RECEIVED"; break;
+				case 3: dest.innerText = "LOADING"; break;
+				case 4: 
+				dest.innerText = ""; 
+					test = JSON.parse(r.responseText);
+					test.rows.forEach(element => {
+						let temp = document.createElement('ol','br')
+						temp.innerHTML = element.name
+						dest.appendChild(temp);
+
+						let temp1 = document.createElement('div')
+						temp1.innerHTML = element.shortDescription
+						dest.appendChild(temp1);
+					});
+				break;
+			    }
+			}
+			r.send(null);
+		}
+
+		function urlhistory(){
+			var url =  document.getElementById("url").value;
+	   		var apikey = "2802cce7-a090-4ea4-9782-c41b0be91b9b";
+			var apipass = "27f7475b-4dc4-4d7e-a072-81b533739654";
+			var dest = document.getElementById("urlhistory");
+			var r = new XMLHttpRequest();	
+			var test;
+
+			r.open("GET", "https://api.xforce.ibmcloud.com/url/history/" +url, true);
+			r.setRequestHeader("Authorization", "Basic "+ window.btoa(apikey + ":" + apipass));
+
+			r.onreadystatechange = function () {
+			switch(r.readyState) {
+				case 0: dest.innerText = "UNSENT"; break;
+				case 1: dest.innerText = "OPENED"; break;
+				case 2: dest.innerText = "HEADERS_RECEIVED"; break;
+				case 3: dest.innerText = "LOADING"; break;
+				case 4: dest.innerText = (r.responseText);
+
+					/* let temp = document.createElement('div')
+					 temp.innerHTML = test.created;
+					 dest.appendChild(temp);
+					 let temp = document.createElement('div')
+					 temp = test.created["Brokers / Stock Exchange"].discription */
+					
+					dest.innerText = ""; 
+					test = JSON.parse(r.responseText);
+					let temp = document.createElement ('div')
+					temp.innerHTML = test.created
+					dest.appendChild(temp);
+				break;
+			    }
+			}
+			r.send(null);
+		}
+
+		function malwareurl(){
+			var url =  document.getElementById("url").value;
+	   		var apikey = "2802cce7-a090-4ea4-9782-c41b0be91b9b";
+			var apipass = "27f7475b-4dc4-4d7e-a072-81b533739654";
+			var dest = document.getElementById("malwareURL");
+			var r = new XMLHttpRequest();	
+			var test;
+
+			r.open("GET", "https://api.xforce.ibmcloud.com/url/malware/" + url, true);
+			r.setRequestHeader("Authorization", "Basic "+ window.btoa(apikey + ":" + apipass));
+
+			r.onreadystatechange = function () {
+			switch(r.readyState) {
+				case 0: dest.innerText = "UNSENT"; break;
+				case 1: dest.innerText = "OPENED"; break;
+				case 2: dest.innerText = "HEADERS_RECEIVED"; break;
+				case 3: dest.innerText = "LOADING"; break;
+				case 4: 
+					dest.innerText = ""; 
+					test = JSON.parse(r.responseText);
+					test.malware.forEach(element => {
+						let temp4 = document.createElement('ol')
+						temp4.innerHTML = element.type
+						dest.appendChild(temp4);
+
+						let temp2 = document.createElement('div')
+						temp2.innerHTML = element.domain
+						dest.appendChild(temp2);
+
+						let temp = document.createElement('ol')
+						temp.innerHTML = element.firstseen
+						dest.appendChild(temp);
+
+						let temp5 = document.createElement('ol')
+						temp5.innerHTML = element.lastseen
+						dest.appendChild(temp5);
+
+						let temp3 = document.createElement('div') 
+						temp3.innerHTML = element.ip
+						dest.appendChild(temp3);
+
+						let temp1 = document.createElement('div')
+						temp1.innerHTML = element.filepath
+						dest.appendChild(temp1);
+
+						let temp6 = document.createElement('div')
+						temp6.innerHTML = element.uri
+						dest.appendChild(temp6);
+
+					});
+				break;
+			    }
+			}
+			r.send(null);
+		}
+
+		function whois(){
+			var url =  document.getElementById("url").value;
+	   		var apikey = "2802cce7-a090-4ea4-9782-c41b0be91b9b";
+			var apipass = "27f7475b-4dc4-4d7e-a072-81b533739654";
+			var dest = document.getElementById("whoIS");
+			var r = new XMLHttpRequest();	
+			var test;
+			
+			r.open("GET", "https://api.xforce.ibmcloud.com/whois/" + url, true);
+			r.setRequestHeader("Authorization", "Basic "+ window.btoa(apikey + ":" + apipass));
+
+			r.onreadystatechange = function () {
+			switch(r.readyState) {
+				case 0: dest.innerText = "UNSENT"; break;
+				case 1: dest.innerText = "OPENED"; break;
+				case 2: dest.innerText = "HEADERS_RECEIVED"; break;
+				case 3: dest.innerText = "LOADING"; break;
+				case 4:
+					dest.innerText = ""; 
+					test = JSON.parse(r.responseText);
+
+					let temp = document.createElement ('div')
+					temp.innerHTML = test.createdDate
+					dest.appendChild(temp);
+
+					let temp1 = document.createElement ('div')
+					temp1.innerHTML = test.updatedDate
+					dest.appendChild(temp1);
+
+					let temp2 = document.createElement ('div')
+					temp2.innerHTML = test.expiresDate
+					dest.appendChild(temp2);
+
+					let temp3 = document.createElement ('div')
+					temp3.innerHTML = test.contactEmail
+					dest.appendChild(temp3);
+
+					let temp4 = document.createElement ('div')
+					temp4.innerHTML = test.registrarName
+					dest.appendChild(temp4);
+
+					test.contact.forEach(element =>{
+						let temp5 = document.createElement ('div')
+						temp5.innerHTML = element.type
+						dest.appendChild(temp5);
+
+						let temp6 = document.createElement ('div')
+						temp6.innerHTML = element.organization
+						dest.appendChild(temp6);
+
+						let temp7 = document.createElement ('div')
+						temp7.innerHTML = element.country
+						dest.appendChild(temp7);
+					})
+				break;
+			    }
+			}
+			r.send(null);
+		}
+
+
+		function malurl(){
+	   		var apikey = "2802cce7-a090-4ea4-9782-c41b0be91b9b";
+			var apipass = "27f7475b-4dc4-4d7e-a072-81b533739654";
+			var dest = document.getElementById("malurl");
+			var r = new XMLHttpRequest();	
+			var test;
+			
+			r.open("GET", "https://api.xforce.ibmcloud.com/xfti/mw/url", true);
+			r.setRequestHeader("Authorization", "Basic "+ window.btoa(apikey + ":" + apipass));
+
+			r.onreadystatechange = function () {
+			switch(r.readyState) {
+				case 0: dest.innerText = "UNSENT"; break;
+				case 1: dest.innerText = "OPENED"; break;
+				case 2: dest.innerText = "HEADERS_RECEIVED"; break;
+				case 3: dest.innerText = "LOADING"; break;
+				case 4: dest.innerText = r.responseText; break; 
+			    }
+			}
+			r.send(null);
+		}
+	</script>
+</head>
+<body>
+	<div class="navbar">
+		<a href="#account">ACCOUNT</a>
+		<a href="#blackips">BLACKLISTED IPS</a>
+		<a href="#malwareinfo">MALWARE INFORMATION</a>
+	  	<a class="active" href="#home">HOME</a>
+	</div>
+	<div class="header">
+		<h1>GBEMI's URLs</h1>
+		<p>Free Scanner to detect MALWARE & FRADULENT Websites in REAL-TIME</p>
+		<input type="text" id = "url" placeholder="Search by URL, IP Address...">
+		<button type="submit" onclick="urlhistory(); malwareurl(); whois(); malurl()"><i class="fa fa-search"></i></button>
+	</div>
+
+	<input type="number" id = "no" placeholder="Number of Threat Activities">
+	<button type="submit" onclick= "threatact()"><i class="fa fa-search"></i></button>
+
+	<div id="loader"></div>
+	<div style="display:none;" id="myDiv" class="animate-bottom">
+	<div id="threatacts" >THREAT ACTIVITIES</div>
+	</div>	
+	<br>
+	<br>
+	<div id="urlhistory">HISTORY OF URL</div>
+	<br>
+	<br>
+	<div id="malwareURL">MALWARE ANALYSIS OF URL</div>
+	<br>
+	<br>
+	<div id="whoIS">WHO IS INFORMATION OF URL</div>
+	<br>
+	<br>
+	<div id="malurl">Activity Map</div>
+</body>
+</html>

@@ -1,0 +1,330 @@
+{
+    "created": "2019-04-23T01:35:00.000Z",
+    "cats": {
+        "Brokers / Stock Exchange": {
+            "confidence": 100,
+            "description": "Includes Web sites about stock, options and futures brokerage / trading and exchange rates.",
+            "reasons": [
+                {
+                    "id": "LNK",
+                    "name": "OSINT feed",
+                    "description": "This data was imported from an OSINT feed."
+                }
+            ]
+        },
+        "Financial Services / Insurance / Real Estate": {
+            "confidence": 100,
+            "description": "This category contains Web sites about real estate, insurance and financial services such as construction financing, loans, credit cards etc.",
+            "reasons": [
+                {
+                    "id": "LNK",
+                    "name": "OSINT feed",
+                    "description": "This data was imported from an OSINT feed."
+                }
+            ]
+        },
+        "Banking": {
+            "confidence": 100,
+            "description": "This category contains Web sites such as bank offices, credit unions, online banking.",
+            "reasons": [
+                {
+                    "id": "LNK",
+                    "name": "OSINT feed",
+                    "description": "This data was imported from an OSINT feed."
+                }
+            ]
+        }
+    },
+    "score": 1,
+    "url": "https://www.accessbankplc.com/",
+    "history": [
+        {
+            "created": "2016-09-08T23:45:00.000Z",
+            "expired": "2016-09-22T20:22:00.000Z",
+            "cats": {
+                "Brokers / Stock Exchange": {
+                    "confidence": 100,
+                    "description": "Includes Web sites about stock, options and futures brokerage / trading and exchange rates.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                },
+                "Financial Services / Insurance / Real Estate": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites about real estate, insurance and financial services such as construction financing, loans, credit cards etc.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                },
+                "Banking": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites such as bank offices, credit unions, online banking.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                }
+            },
+            "score": 1
+        },
+        {
+            "created": "2016-09-22T20:22:00.000Z",
+            "expired": "2018-05-31T04:26:00.000Z",
+            "cats": {
+                "Brokers / Stock Exchange": {
+                    "confidence": 100,
+                    "description": "Includes Web sites about stock, options and futures brokerage / trading and exchange rates.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ],
+                    "deleted": true
+                },
+                "Financial Services / Insurance / Real Estate": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites about real estate, insurance and financial services such as construction financing, loans, credit cards etc.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ],
+                    "deleted": true
+                },
+                "Banking": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites such as bank offices, credit unions, online banking.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ],
+                    "deleted": true
+                }
+            },
+            "deleted": true
+        },
+        {
+            "created": "2018-05-31T04:26:00.000Z",
+            "expired": "2018-09-04T04:03:00.000Z",
+            "cats": {
+                "Brokers / Stock Exchange": {
+                    "confidence": 100,
+                    "description": "Includes Web sites about stock, options and futures brokerage / trading and exchange rates.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                },
+                "Financial Services / Insurance / Real Estate": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites about real estate, insurance and financial services such as construction financing, loans, credit cards etc.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                },
+                "Banking": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites such as bank offices, credit unions, online banking.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                }
+            },
+            "score": 1
+        },
+        {
+            "created": "2018-09-04T04:03:00.000Z",
+            "expired": "2018-09-26T06:25:00.000Z",
+            "cats": {
+                "Brokers / Stock Exchange": {
+                    "confidence": 100,
+                    "description": "Includes Web sites about stock, options and futures brokerage / trading and exchange rates.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ],
+                    "deleted": true
+                },
+                "Financial Services / Insurance / Real Estate": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites about real estate, insurance and financial services such as construction financing, loans, credit cards etc.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ],
+                    "deleted": true
+                },
+                "Banking": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites such as bank offices, credit unions, online banking.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ],
+                    "deleted": true
+                }
+            },
+            "deleted": true
+        },
+        {
+            "created": "2018-09-26T06:25:00.000Z",
+            "expired": "2019-01-21T21:01:00.000Z",
+            "cats": {
+                "Brokers / Stock Exchange": {
+                    "confidence": 100,
+                    "description": "Includes Web sites about stock, options and futures brokerage / trading and exchange rates.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                },
+                "Financial Services / Insurance / Real Estate": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites about real estate, insurance and financial services such as construction financing, loans, credit cards etc.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                },
+                "Banking": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites such as bank offices, credit unions, online banking.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                }
+            },
+            "score": 1
+        },
+        {
+            "created": "2019-01-21T21:01:00.000Z",
+            "expired": "2019-04-23T01:35:00.000Z",
+            "cats": {
+                "Brokers / Stock Exchange": {
+                    "confidence": 100,
+                    "description": "Includes Web sites about stock, options and futures brokerage / trading and exchange rates.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ],
+                    "deleted": true
+                },
+                "Financial Services / Insurance / Real Estate": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites about real estate, insurance and financial services such as construction financing, loans, credit cards etc.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ],
+                    "deleted": true
+                },
+                "Banking": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites such as bank offices, credit unions, online banking.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ],
+                    "deleted": true
+                }
+            },
+            "deleted": true
+        },
+        {
+            "created": "2019-04-23T01:35:00.000Z",
+            "cats": {
+                "Brokers / Stock Exchange": {
+                    "confidence": 100,
+                    "description": "Includes Web sites about stock, options and futures brokerage / trading and exchange rates.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                },
+                "Financial Services / Insurance / Real Estate": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites about real estate, insurance and financial services such as construction financing, loans, credit cards etc.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                },
+                "Banking": {
+                    "confidence": 100,
+                    "description": "This category contains Web sites such as bank offices, credit unions, online banking.",
+                    "reasons": [
+                        {
+                            "id": "LNK",
+                            "name": "OSINT feed",
+                            "description": "This data was imported from an OSINT feed."
+                        }
+                    ]
+                }
+            },
+            "score": 1
+        }
+    ]
+}

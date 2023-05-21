@@ -1,0 +1,59 @@
+{
+    "created": "2016-12-19T08:08:00.000Z",
+    "cats": {
+        "Social Networking": {
+            "confidence": 100,
+            "description": "This category contains Web portals that provide a virtual community to find and connect to people interested in a particular shared subject. The sites enable their members to publish profiles including personal data / media and provide interpersonal communication channels. Business Networking sites are not listed here but in their own category.",
+            "reasons": [
+                {
+                    "id": "XFR",
+                    "name": "X-Force Research",
+                    "description": "Based on input from X-Force Research"
+                }
+            ]
+        },
+        "Social Media": {
+            "confidence": 100,
+            "description": "Includes Web sites that enable users to view, search for, rate and publish media files and streams.",
+            "reasons": [
+                {
+                    "id": "XFR",
+                    "name": "X-Force Research",
+                    "description": "Based on input from X-Force Research"
+                }
+            ]
+        }
+    },
+    "score": 1,
+    "url": "youtube.com",
+    "history": [
+        {
+            "created": "2016-12-19T08:08:00.000Z",
+            "cats": {
+                "Social Networking": {
+                    "confidence": 100,
+                    "description": "This category contains Web portals that provide a virtual community to find and connect to people interested in a particular shared subject. The sites enable their members to publish profiles including personal data / media and provide interpersonal communication channels. Business Networking sites are not listed here but in their own category.",
+                    "reasons": [
+                        {
+                            "id": "XFR",
+                            "name": "X-Force Research",
+                            "description": "Based on input from X-Force Research"
+                        }
+                    ]
+                },
+                "Social Media": {
+                    "confidence": 100,
+                    "description": "Includes Web sites that enable users to view, search for, rate and publish media files and streams.",
+                    "reasons": [
+                        {
+                            "id": "XFR",
+                            "name": "X-Force Research",
+                            "description": "Based on input from X-Force Research"
+                        }
+                    ]
+                }
+            },
+            "score": 1
+        }
+    ]
+}

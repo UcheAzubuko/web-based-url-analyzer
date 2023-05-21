@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Malware Analysis</title>
+
+    <script>
+          function generateTables(ele, fields) { //{name:[]} not [{}]
+      let generatedTable = document.createElement("table");
+      generatedTable.id = "generated-table";
+      generatedTable.className = "styled-table";
+      let tableHeader = document.createElement("thead");
+      let tableRow = document.createElement("tr");
+      let temptableHeaderData = "";
+      let tableLength = [];
+      fields.forEach((field) => {
+        temptableHeaderData += `<th>${field}</th>`;
+        /* console.log("This is what am currently debugging", field, ele[field]);
+        console.log('this is singular element',ele);
+        tableLength.push(ele[field].length); */
+      });
+      tableRow.innerHTML = temptableHeaderData;
+      tableHeader.appendChild(tableRow);
+      generatedTable.appendChild(tableHeader);
+      let tableBody = document.createElement("tbody");
+      let tempTableContent = "";
+      /* for (let i = 0; i < Math.max(...tableLength); i++) {
+        tempTableContent += `<tr>${fields.map(
+          (field) => `<td>${ele[field][i] ? ele[field][i] : ""}</td>`
+        )}</tr>`;
+      } */
+
+      for (let i = 0; i < ele.length ; i++) {
+        console.log(ele[i]);           
+          tempTableContent += `<tr>${fields.map(
+            (field) => `<td>${ele[i][field] ? ele[i][field] : ""}</td>`
+          )}</tr>`;
+        
+      }
+      tempTableContent = tempTableContent.replace(/,/g, '') // remove a particular error
+      console.log('Table content', tempTableContent);
+
+      tableBody.innerHTML = tempTableContent;
+      generatedTable.appendChild(tableBody);
+
+      return generatedTable;
+    }
+
+    function threatact() {
+      var no = document.getElementById("no").value;
+      var apikey = "2802cce7-a090-4ea4-9782-c41b0be91b9b";
+      var apipass = "27f7475b-4dc4-4d7e-a072-81b533739654";
+      var dest = document.getElementById("threatacts");
+      var r = new XMLHttpRequest();
+      var test;
+
+      r.open("GET", "https://api.xforce.ibmcloud.com/threat_activities?limit=" + no, true);
+      r.setRequestHeader("Authorization", "Basic " + window.btoa(apikey + ":" + apipass));
+
+      r.onreadystatechange = function () {
+        switch (r.readyState) {
+          case 0: dest.innerText = "UNSENT"; break;
+          case 1: dest.innerText = "OPENED"; break;
+          case 2: dest.innerText = "HEADERS_RECEIVED"; break;
+          case 3: dest.innerText = "LOADING"; break;
+          case 4:
+            dest.innerText = "";
+            test = JSON.parse(r.responseText);
+            console.log(test.rows);
+            let tables;
+            tables = generateTables(test.rows, ['name', 'created', 'shortDescription', 'locked', 'statement']);
+            dest.appendChild(tables);
+            /* test.rows.forEach(element => {
+              let temp = document.createElement('ol')
+              temp.innerHTML = element.name
+              dest.appendChild(temp);
+
+              let temp2 = document.createElement('ol')
+              temp2.innerHTML = element.created
+              dest.appendChild(temp2);
+
+              let temp1 = document.createElement('div')
+              temp1.innerHTML = element.shortDescription
+              dest.appendChild(temp1);
+
+              let temp3 = document.createElement('div')
+              temp3.innerHTML = element.locked
+              dest.appendChild(temp3);
+
+              let temp4 = document.createElement('div')
+              temp4.innerHTML = element.statement
+              dest.appendChild(temp4);
+            }); */
+            break;
+        }
+      }
+      r.send(null);
+    }
+
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+<!--
+
+Host Cloud Template
+
+https://templatemo.com/tm-541-host-cloud
+
+-->
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>G- <em>URLs</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <div class="dropdown">
+              <button class="dropbtn">MALICIOUS INFORMATONS
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                  <li class="nav-item">
+                      <a class="nav-link" href="malwareanalysis.html" style="color: black;">MALWARE ANALYSIS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="MaliciousURLs.html" style="color: black;">MALICIOUS URLS</a>
+                    </li>
+              </div>
+            </div>
+              <li class="nav-item active">
+                <a class="nav-link" href="threatactivities.html">THREAT ANALYSIS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Earlywarn.html">SPAM URLS</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header>         
+
+    <!-- Page Content -->
+    <!-- Heading Starts Here -->
+    
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>THREAT ANALYSIS</h1>
+            <h2>Returns a list of Threat Analysis Reports</h2>
+            <p><a href="index.html">Home</a> / <span>Threat Activities</span></p>
+            <div id="search-section">
+
+                <div class="searchText">
+                  <input type="number" id="no" class="searchTextmal" placeholder="Input Number of Activities" autocomplete="on">
+                </div>
+                <button type="submit" onclick="threatact()" class="malware">CHECK ACTIVITIES</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Heading Ends Here -->
+
+    <div id="threatacts">THREAT ACTIVITIES</div>
+
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>About System</h2>
+              </div>
+              <p>
+                G-URLs is Web-Based System that Gathers, obtain and analyzes URLs of all Nigerian Banks 
+                and other URLs at larger to show malware found in these URLs.
+              </p>
+              <br>
+            </div>
+          </div>
+  
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>Cont'd</h2>
+              </div>
+              <p>
+                It aslo provides lists of Malicious URLs, Various Malware Analysis and provides Early Warning of newly created
+                URLs
+              </p>
+            </div>
+          </div>
+          
+          
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>Useful Links</h2>
+              </div>
+              <ul class="footer-list">
+                <li><a href="malwareanalysis.html">Malware Analysis</a></li>
+                <li><a href="MaliciousURLs.html">Malicious URLs</a></li>
+                <li><a href="threatactivities.html">Threat Analysis</a></li>
+                <li><a href="Earlywarn.html">Early Warning</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>More Information</h2>
+              </div>
+              <ul class="footer-list">
+                <li>Phone: <a href="#">07012044580</a></li>
+                <li>Email: <a href="#">gbemioyewumidgreat@gmail.com</a></li>
+                <li><a href="#">gbemisola.oyewumi@stu.cu.edu.ng</a></li>
+                <li>Support: <a href="#">gbemioyewumidgreat@gmail.com</a></li>
+                <li>Website: <a href="index.html">www.G-URLs.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Ends Here -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+  </body>
+</html>
