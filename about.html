@@ -63,8 +63,8 @@ https://templatemo.com/tm-541-host-cloud
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li id="homeNavLink" class="nav-item">
-                <a class="nav-link" href="index.html"
-                  >Home
+                <a class="nav-link" href="index.html">
+                  Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
@@ -73,9 +73,6 @@ https://templatemo.com/tm-541-host-cloud
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="services.html">Our Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -136,12 +133,35 @@ https://templatemo.com/tm-541-host-cloud
                   type="email"
                   class="form-control"
                   id="signUpEmail"
-                  aria-describedby="emailHelp"
                   placeholder="Enter email"
                 />
-                <small id="emailHelp" class="form-text text-muted"
-                  >We'll never share your email with anyone else.</small
-                >
+              </div>
+              <div class="form-group">
+                <label for="signUpFirstName">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signUpName"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="signUpPhone">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="signUpPhone"
+                  placeholder="Enter phone"
+                />
+              </div>
+              <div class="form-group">
+                <label for="signUpAddress">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signUpAddress"
+                  placeholder="Enter address"
+                />
               </div>
               <div class="form-group">
                 <label for="signUpPassword">Password</label>
@@ -518,6 +538,13 @@ https://templatemo.com/tm-541-host-cloud
         onAuthStateChanged,
         signOut,
       } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+      import {
+        getDatabase,
+        ref,
+        child,
+        set,
+        get,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -558,10 +585,10 @@ https://templatemo.com/tm-541-host-cloud
         createUserWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
             const user = userCredential.user;
-            console.log(user);
             alert(
               `Hi, user with email: ${user.email}. Your account has been created successfully.`
             );
+            window.location.href = "index.html";
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -576,7 +603,7 @@ https://templatemo.com/tm-541-host-cloud
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
             const user = userCredential.user;
-            console.log(user);
+            window.location.href = "index.html";
             alert(
               `Hi, user with email: ${user.email}. You have signed into your account successfully.`
             );
