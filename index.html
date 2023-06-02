@@ -365,11 +365,11 @@ https://templatemo.com/tm-541-host-cloud
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
               <a class="nav-link" href="index.html">HOME
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
+            </li> -->
             <div class="dropdown">
               <button class="dropbtn" style="color: black;">MALICIOUS INFORMATONS
                 <i class="fa fa-caret-down"></i>
@@ -379,7 +379,7 @@ https://templatemo.com/tm-541-host-cloud
                       <a class="nav-link" href="malwareanalysis.html" style="color: black;">MALWARE ANALYSIS</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="MaliciousURLs.html">MALICIOUS URLS</a>
+                      <a class="nav-link" href="MaliciousURLs.html" style="color: black;">MALICIOUS URLS</a>
                     </li>
               </div>
             </div>
@@ -388,6 +388,9 @@ https://templatemo.com/tm-541-host-cloud
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Earlywarn.html">SPAM URLS</a>
+            </li>
+            <li id="signOutNavButton" role="button" class="nav-item">
+              <a class="nav-link" href="#">Sign Out</a>
             </li>
           </ul>
         </div>
@@ -418,7 +421,7 @@ https://templatemo.com/tm-541-host-cloud
   </div>
   <!-- Banner Ends Here -->
 
-  <div class="section-heading">
+  <div class="section-heading" >
   <br>
   <h2 style="text-align: center;"> MALWARE FROM URL </h2>
   <h2 style="text-align: center;" id="Number"></h2>
@@ -426,59 +429,9 @@ https://templatemo.com/tm-541-host-cloud
   <br>
   <br>
   <h2 style="text-align: center;"> WHO IS INFORMATION OF URL </h2>
-  <div id="whoIS" style="text-align: center;">WHO IS INFORMATION OF URL</div>
+  <div id="whoIS" style="text-align: center; margin-bottom: 30px;">WHO IS INFORMATION OF URL</div>
 
 
-  <!-- Services Starts Here -->
-   <div class="services-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Services System Provides</h2>
-            <p>G-URLs is Web-Based System that Gathers, obtain and analyzes URLs of all Nigerian Banks and other URLs at larger to show malware found in these URLs.
-              It aslo provides lists of Malicious URLs, Various Malware Analysis and provides Early Warning of newly created
-              URLs
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="service-item">
-            <i class="fa fa-database"></i>
-              <a href="MaliciousURLs.html">
-                <h4>Malicious URLs</h4>
-              </a>
-            <p>This provides a list a Malicious URLs in Real time. It contains a table made up of list of Malicious URLs.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="service-item">
-            <i class="fa fa-database"></i>
-              <a href="threatactivities.html">
-                <h4>Threat Activities</h4>
-              </a>
-            <p>
-              This provides a list of Threat Activities in Real time. It contains columns of Name, when Created, Short Description
-              of the threat activities.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="service-item">
-            <i class="fa fa-database"></i>
-            <a href="malwareanalysis.html">
-              <h4>Malware Analysis</h4>
-            </a>
-            <p>
-              This provides a list of Analysis of Malware. List also contains columns of Name, when Created, Short Description
-              of the threat activities.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Services Ends Here
 
 
   <!-- Footer Starts Here -->
@@ -530,10 +483,12 @@ https://templatemo.com/tm-541-host-cloud
               <h2>More Information</h2>
             </div>
             <ul class="footer-list">
-              <li>Phone: <a href="#">07012044580</a></li>
-              <li>Email: <a href="#">gbemioyewumidgreat@gmail.com</a></li>
-              <li><a href="#">gbemisola.oyewumi@stu.cu.edu.ng</a></li>
-              <li>Support: <a href="#">gbemioyewumidgreat@gmail.com</a></li>
+              <li>Phone: <a href="#"> 08051511818</a></li>
+              <li>Email: <a href="#">danielekeh11@gmail.com
+</a></li>
+               
+              <li>Support: <a href="#">danielekeh11@gmail.com
+</a></li>
               <li>Website: <a href="index.html">www.G-URLs.com</a></li>
             </ul>
           </div>
@@ -546,6 +501,58 @@ https://templatemo.com/tm-541-host-cloud
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  
+    <!-- Firebase CDN -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        onAuthStateChanged,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+      import {
+        getDatabase,
+        ref,
+        child,
+        set,
+        get,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDjfrNXiYZdH2Njjqr1tqtR6JDWcf-xt9s",
+        authDomain: "tello-final-year-project.firebaseapp.com",
+        projectId: "tello-final-year-project",
+        storageBucket: "tello-final-year-project.appspot.com",
+        messagingSenderId: "338986317750",
+        appId: "1:338986317750:web:79d7e60a59cfbf362e7317",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      // Store getAuth functionality from firebase to enable authentication in the app
+      const auth = getAuth(app);
+
+ 
+
+
+      const userSignOut = async () => {
+        await signOut(auth);
+      };
+
+      signOutNavButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        userSignOut();
+        window.location.href = "about.html";
+      });
+    </script>
+
 
   <!-- Additional Scripts -->
   <script src="assets/js/custom.js"></script>
